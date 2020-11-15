@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/backgroundcolor">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/product_list_button"
+        android:text="@string/product_list"
+        android:onClick="productListHandler"
+        android:textColor="?attr/textbutton"
+        android:backgroundTint="?attr/buttoncolor"
+        android:layout_width="176dp"
+        android:layout_height="75dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/options_button"
+        android:text="@string/options"
+        android:onClick="optionsHandler"
+        android:textColor="?attr/textbutton"
+        android:backgroundTint="?attr/buttoncolor"
+        android:layout_width="176dp"
+        android:layout_height="75dp" />
+</LinearLayout>

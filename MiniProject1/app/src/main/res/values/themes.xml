@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Common style - light -->
+    <style name="light_theme_common" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#009688</item>
+        <item name="colorAccent">#FF03DAC5</item>
+        <item name="backgroundcolor">#FBFBFB</item>
+        <item name="textbutton">#fcfcfc</item>
+        <item name="cardbackground">#ffffff</item>
+        <item name="textcolor">#808080</item>
+        <item name="tintcolor">#000000</item>
+        <item name="buttoncolor">#1ABCAD</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <!-- Common style - dark -->
+    <style name="dark_theme_common" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#FF03DAC5</item>
+        <item name="backgroundcolor">#303030</item>
+        <item name="cardbackground">#424242</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="tintcolor">#ffffff</item>
+        <item name="buttoncolor">#009688</item>
+        <item name="textbutton">#fcfcfc</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <!-- Light theme font variants -->
+    <style name="lighttheme_small" parent="@style/light_theme_common">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="lighttheme_normal" parent="@style/light_theme_common">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="lighttheme_large" parent="@style/light_theme_common">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Dark theme font variants -->
+    <style name="darktheme_small" parent="@style/dark_theme_common">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="darktheme_normal" parent="@style/dark_theme_common">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="darktheme_large" parent="@style/dark_theme_common">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+</resources>
