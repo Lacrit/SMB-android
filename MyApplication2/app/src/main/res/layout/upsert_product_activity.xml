@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/backgroundcolor">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="331dp"
+        android:layout_height="524dp"
+        app:cardBackgroundColor="?attr/cardbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameEditTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/name"
+                android:textColor="?attr/textcolor"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nameEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/product_name"
+                android:inputType="textPersonName"
+                android:backgroundTint="?attr/buttoncolor"
+                android:textColor="?attr/textcolor"
+                android:textColorHint="?attr/hintcolor"
+                android:autofillHints="test"
+                android:labelFor="@+id/nameEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameEditTextView"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/priceEditTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="eggs"
+                android:text="@string/price"
+                android:textColor="?attr/textcolor"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameEdit" />
+
+            <EditText
+                android:id="@+id/priceEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:autofillHints="10.0"
+                android:ems="10"
+                android:hint="@string/_10_0"
+                android:textColorHint="?attr/hintcolor"
+                android:inputType="numberDecimal"
+                android:textColor="?attr/textcolor"
+                android:backgroundTint="?attr/buttoncolor"
+                android:labelFor="@+id/priceEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditTextView"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/quantityEditTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/quantity"
+                android:textColor="?attr/textcolor"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceEdit" />
+
+            <EditText
+                android:id="@+id/quantityEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:autofillHints="10"
+                android:hint="@string/_10"
+                android:ems="10"
+                android:textColorHint="?attr/hintcolor"
+                android:inputType="number"
+                android:textColor="?attr/textcolor"
+                android:backgroundTint="?attr/buttoncolor"
+                android:labelFor="@+id/quantityEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quantityEditTextView"
+                tools:ignore="LabelFor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/product_list_button"
+                android:layout_width="176dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:backgroundTint="?attr/buttoncolor"
+                android:onClick="save"
+                android:text="@string/save"
+                android:textColor="?attr/textbutton" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
