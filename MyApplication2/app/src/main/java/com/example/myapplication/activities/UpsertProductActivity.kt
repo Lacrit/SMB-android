@@ -38,7 +38,7 @@ class UpsertProductActivity : AppCompatActivity() {
         if (tmpId != "") {
             repo.getById(tmpId, object : OnGetDataListener {
                 override fun onSuccess(data: DataSnapshot) {
-                    product = data?.getValue<Product>()
+                    product = data.getValue<Product>()
                     if (product != null) {
                         name.setText(product!!.name)
                         price.setText(product!!.price.toString())

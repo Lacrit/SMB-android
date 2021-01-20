@@ -19,6 +19,15 @@
             android:layout_height="75dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/map_button"
+            android:text="@string/shops_map"
+            android:onClick="shopsMapHandler"
+            android:textColor="?attr/textbutton"
+            android:backgroundTint="?attr/buttoncolor"
+            android:layout_width="176dp"
+            android:layout_height="75dp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/options_button"
             android:text="@string/options"
             android:onClick="optionsHandler"

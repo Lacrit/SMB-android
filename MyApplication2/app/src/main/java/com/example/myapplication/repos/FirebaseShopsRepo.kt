@@ -1,31 +1,17 @@
 package com.example.myapplication.repos
 
-import android.app.Application
-import android.content.Context
-import androidx.lifecycle.ViewModel
-import com.example.myapplication.models.Product
-import com.example.myapplication.utilities.SharedPrefs
+import com.example.myapplication.models.Shop
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
+class FirebaseShopsRepo {
 
-interface OnGetDataListener {
-    fun onSuccess(data: DataSnapshot)
-}
 
-class FirebaseProductRepo(private val sharedPrefs : SharedPrefs) : ViewModel() {
     private val auth = FirebaseAuth.getInstance()
-    var database : DatabaseReference
-     init {
-         database = if (sharedPrefs.getListModeState() == SharedPrefs.INDIVIDUAL) {
-             FirebaseDatabase.getInstance().getReference(auth.currentUser!!.uid).child("products")
-         } else {
-             FirebaseDatabase.getInstance().getReference("shared")
-         }
-     }
+    var database = FirebaseDatabase.getInstance().getReference(auth.currentUser!!.uid).child("shops")
 
-    fun insertOrUpdate(item: Product) {
-        database.child(item.id).setValue(item)
+    fun insertOrUpdate(shop: Shop) {
+        database.child(shop.id).setValue(shop)
     }
 
     fun getById(id: String, listener: OnGetDataListener) {
@@ -44,15 +30,13 @@ class FirebaseProductRepo(private val sharedPrefs : SharedPrefs) : ViewModel() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 listener.onSuccess(dataSnapshot)
             }
-
             override fun onCancelled(databaseError: DatabaseError) = Unit
         })
     }
 
-    fun delete(product: Product) {
-        database.child(product.id).removeValue()
+    fun delete(shop: Shop) {
+        database.child(shop.id).removeValue()
     }
-
 
 
 }

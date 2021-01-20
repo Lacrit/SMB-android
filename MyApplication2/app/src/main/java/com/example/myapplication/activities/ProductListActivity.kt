@@ -41,6 +41,7 @@ class ProductListActivity : AppCompatActivity() {
         repo.getAll(object : OnGetDataListener {
             override fun onSuccess(data: DataSnapshot) {
                 CoroutineScope(Dispatchers.IO).launch {
+                    var cos = data
                     val products = data.getValue<HashMap<String, Product>>()
                     if (products != null) {
                         list = ArrayList(products.values)
